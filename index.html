@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed & Shorouk — August 7, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading">
+
+  <!-- Preloader -->
+  <div class="loader" id="loader">
+    <div class="loader-mark">A&nbsp;&amp;&nbsp;Sh</div>
+  </div>
+
+  <!-- Nav -->
+  <header class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-mark">A <span>&amp;</span> Sh</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#party" class="nav-link">Party</a>
+        <a href="#details" class="nav-link">Details</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#rsvp" class="nav-link nav-cta">RSVP</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-scrim" id="navScrim"></div>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-domes" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0,200 L0,120 Q60,60 120,120 Q150,40 190,110 Q230,50 270,120 Q330,60 390,120 L390,200 Z M400,200 L400,100 Q460,30 520,100 Q560,20 610,95 Q660,25 710,100 Q760,40 820,110 L820,200 Z M830,200 L830,130 Q890,70 950,130 Q1000,60 1050,125 Q1110,65 1170,130 L1170,200 Z M1180,200 L1180,110 Q1240,50 1300,110 Q1340,40 1380,105 Q1410,60 1440,100 L1440,200 Z" fill="var(--ivory)"/></svg>
+    </div>
+    <div class="hero-inner">
+      <p class="eyebrow" data-reveal>We're getting married</p>
+      <h1 class="hero-names" data-reveal>Ahmed <span class="amp">&amp;</span> Shorouk</h1>
+      <p class="hero-date" data-reveal>7 · 8 · 2026 — Santorini Hall, Sadat City</p>
+
+      <div class="countdown" data-reveal>
+        <div class="cd-block"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+        <div class="cd-block"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+        <div class="cd-block"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Minutes</span></div>
+        <div class="cd-block"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Seconds</span></div>
+      </div>
+
+      <div class="hero-actions" data-reveal>
+        <a href="#rsvp" class="btn btn-solid">RSVP</a>
+        <a href="#details" class="btn btn-line">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>How it began</p>
+      <h2 class="section-title center" data-reveal>Our Story</h2>
+
+      <div class="chapters">
+        <article class="chapter" data-reveal>
+          <div class="chapter-photo">
+            <!-- Swap this div for: <img src="your-photo.jpg" alt="Our first date"> -->
+          </div>
+          <div class="chapter-copy">
+            <span class="chapter-num">01</span>
+            <h3>The First Date</h3>
+            <p>A crowded café, a shared table, and a conversation neither of us meant to have for two hours. We still argue about who noticed who first.</p>
+          </div>
+        </article>
+
+        <article class="chapter chapter-reverse" data-reveal>
+          <div class="chapter-photo">
+            <!-- Swap this div for: <img src="your-photo.jpg" alt="The proposal"> -->
+          </div>
+          <div class="chapter-copy">
+            <span class="chapter-num">02</span>
+            <h3>The Proposal</h3>
+            <p>Years of small choices led to one big one. He asked, she said yes, and neither of us remembers the exact words — just the shaking hands.</p>
+          </div>
+        </article>
+
+        <article class="chapter" data-reveal>
+          <div class="chapter-photo">
+            <!-- Swap this div for: <img src="your-photo.jpg" alt="Our secret day"> -->
+          </div>
+          <div class="chapter-copy">
+            <span class="chapter-num">03</span>
+            <h3>Our Secret Day</h3>
+            <p>A quiet moment just for us, before the celebration everyone else gets to share. Some memories are meant to stay between two people.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wedding Party -->
+  <section class="party" id="party">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>Our nearest and dearest</p>
+      <h2 class="section-title center" data-reveal>Wedding Party</h2>
+    </div>
+
+    <div class="party-scroller-wrap" data-reveal>
+      <button class="party-arrow party-prev" id="partyPrev" aria-label="Previous">&#8249;</button>
+      <div class="party-scroller" id="partyScroller">
+        <div class="party-card">
+          <div class="party-photo"></div>
+          <h4>Emily White</h4>
+          <p>Maid of Honor</p>
+        </div>
+        <div class="party-card">
+          <div class="party-photo"></div>
+          <h4>Michael Brown</h4>
+          <p>Best Man</p>
+        </div>
+        <div class="party-card">
+          <div class="party-photo"></div>
+          <h4>Sarah Green</h4>
+          <p>Bridesmaid</p>
+        </div>
+        <div class="party-card">
+          <div class="party-photo"></div>
+          <h4>David Black</h4>
+          <p>Groomsman</p>
+        </div>
+        <div class="party-card">
+          <div class="party-photo"></div>
+          <h4>Jessica Blue</h4>
+          <p>Bridesmaid</p>
+        </div>
+        <div class="party-card">
+          <div class="party-photo"></div>
+          <h4>Chris Yellow</h4>
+          <p>Groomsman</p>
+        </div>
+      </div>
+      <button class="party-arrow party-next" id="partyNext" aria-label="Next">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location" id="location">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>Find us</p>
+      <h2 class="section-title center" data-reveal>Location</h2>
+      <p class="location-copy center" data-reveal>Santorini Hall, Sadat City — see you there.</p>
+    </div>
+    <div class="map-frame" data-reveal>
+      <!-- Replace the query in this src with your exact venue address for a precise pin -->
+      <iframe
+        src="https://maps.google.com/maps?q=Santorini%20Hall%20Sadat%20City%20Egypt&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Venue location map">
+      </iframe>
+    </div>
+    <div class="wrap">
+      <div class="location-actions" data-reveal>
+        <a href="https://www.google.com/maps/search/?api=1&query=Santorini+Hall+Sadat+City+Egypt" target="_blank" rel="noopener" class="btn btn-line">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details / Timeline -->
+  <section class="details" id="details">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>Join us to celebrate</p>
+      <h2 class="section-title center" data-reveal>The Day's Events</h2>
+
+      <ol class="timeline">
+        <li data-reveal>
+          <span class="tl-time">2:00 PM</span>
+          <div class="tl-body">
+            <h3>The Ceremony</h3>
+            <p>Vows exchanged in the main hall. Please be seated by 1:45 PM.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="tl-time">4:00 PM</span>
+          <div class="tl-body">
+            <h3>Cocktail Hour</h3>
+            <p>Light refreshments and drinks on the terrace, weather permitting.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="tl-time">6:00 PM</span>
+          <div class="tl-body">
+            <h3>The Reception</h3>
+            <p>Dinner, dancing, and the first of many toasts.</p>
+          </div>
+        </li>
+        <li data-reveal>
+          <span class="tl-time">11:00 PM</span>
+          <div class="tl-body">
+            <h3>Send-Off</h3>
+            <p>We'll close the night together — thank you for being part of it.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="venue-note" data-reveal>
+        <p><strong>Santorini Hall</strong> — Sadat City</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>Moments we cherish</p>
+      <h2 class="section-title center" data-reveal>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="g-item g-tall" data-reveal></div>
+        <div class="g-item" data-reveal></div>
+        <div class="g-item" data-reveal></div>
+        <div class="g-item" data-reveal></div>
+        <div class="g-item g-tall" data-reveal></div>
+        <div class="g-item" data-reveal></div>
+      </div>
+      <p class="gallery-hint">Add your favorite photos here — swap each <code>.g-item</code> with an <code>&lt;img&gt;</code>.</p>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp">
+    <div class="wrap rsvp-inner">
+      <p class="eyebrow center" data-reveal>Please respond by September 1, 2026</p>
+      <h2 class="section-title center" data-reveal>Will You Join Us?</h2>
+      <p class="rsvp-copy center" data-reveal>We can't wait to celebrate with you. Let us know if you'll be there.</p>
+
+      <form class="rsvp-form" id="rsvpForm" data-reveal>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="guests">Number attending</label>
+          <input type="number" id="guests" name="guests" min="1" value="1" required>
+        </div>
+        <div class="field field-radio">
+          <label><input type="radio" name="attending" value="yes" checked> Joyfully accepts</label>
+          <label><input type="radio" name="attending" value="no"> Regretfully declines</label>
+        </div>
+        <button type="submit" class="btn btn-solid">Send RSVP</button>
+        <p class="form-note" id="formNote" hidden>Thank you — your response has been noted.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p class="footer-mark">Ahmed <span class="amp">&amp;</span> Shorouk</p>
+    <p class="footer-sub">7 · 8 · 2026 &middot; Santorini Hall, Sadat City</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
