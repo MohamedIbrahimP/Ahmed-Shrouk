@@ -94,17 +94,32 @@ a { color: inherit; }
 .loader {
   position: fixed;
   inset: 0;
-  z-index: 9999;
-  background: var(--aegean);
+  z-index: 9998;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
+
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(src/imgs/Cermony.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  filter: blur(8px);
+  transform: scale(1.1); /* hides blurred edge gap */
+  z-index: -1;
+}
+
 .loader-mark {
+  position: relative; /* keeps it above the ::before, since ::before has z-index:-1 */
   font-family: var(--display);
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 5rem;
   color: var(--ivory);
   opacity: 0;
   animation: fadeUp 0.8s 0.3s ease forwards;
@@ -444,10 +459,40 @@ body.nav-open .nav-scrim { opacity: 1; visibility: visible; }
   margin: 0 auto 1rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--aegean) 0%, #3D6B94 70%, #E8B4C0 140%);
+  /* background-image: url(src/imgs/MohamedIbrahim.jpeg);
+  background-size: cover; */
+
   border: 4px solid var(--ivory);
   box-shadow: 0 6px 20px rgba(20, 41, 66, 0.12);
 }
-
+.MI {
+  background-image: url(src/imgs/MohamedIbrahim.jpeg);
+  background-size: cover;
+}
+.BG {
+  background-image: url(src/imgs/Basem.jpeg);
+  background-size: cover;
+}
+.NA {
+  background-image: url(src/imgs/Nader.jpeg);
+  background-size: cover;
+}
+.MB {
+  background-image: url(src/imgs/Badr.jpeg);
+  background-size: cover;
+}
+.AM {
+  background-image: url(src/imgs/Ali.jpeg);
+  background-size: cover;
+}
+.HH {
+  background-image: url(src/imgs/Hassan.jpeg);
+  background-size: cover;
+}
+.MR {
+  background-image: url(src/imgs/Reda.jpg);
+  background-size: cover;
+}
 .party-card h4 {
   font-family: var(--display);
   font-style: italic;
@@ -580,9 +625,35 @@ body.nav-open .nav-scrim { opacity: 1; visibility: visible; }
   margin-top: 2.5rem;
 }
 .g-item {
+
   background: linear-gradient(135deg, var(--aegean) 0%, #3D6B94 100%);
   border-radius: 4px;
   opacity: 0.85;
+}
+.g-1{
+  background-image: url(src/imgs/1.jpeg);
+  background-size: cover;
+}
+.g-2{
+    background-image: url(src/imgs/2.jpeg);
+  background-size: cover;
+}
+.g-3{
+  background-image: url(src/imgs/3.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.g-4{
+    background-image: url(src/imgs/4.jpeg);
+  background-size: cover;
+}
+.g-5{
+    background-image: url(src/imgs/5.jpeg);
+  background-size: cover;
+}
+.g-6{
+    background-image: url(src/imgs/6.jpeg);
+  background-size: cover;
 }
 .g-tall { grid-row: span 2; }
 
