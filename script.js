@@ -1,5 +1,97 @@
 document.addEventListener('DOMContentLoaded', function () {
+const music = document.getElementById('bg-music');
+music.volume = 0.5;
+const toggleBtn = document.getElementById('music-toggle');
+let isPlaying = false;
 
+toggleBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    music.pause();
+    toggleBtn.textContent = '🔇';
+  } else {
+    music.play();
+    toggleBtn.textContent = '🔊';
+  }
+  isPlaying = !isPlaying;
+});
+function startMusicOnce() {
+  music.play().then(() => {
+    isPlaying = true;
+    toggleBtn.textContent = '🔊';
+  }).catch(() => {
+    // Autoplay still blocked, user will need to click the button
+  });
+  document.removeEventListener('click', startMusicOnce);
+}
+
+document.addEventListener('click', startMusicOnce, { once: true });
+//------------------------------
+const canvas = document.getElementById('fireworks-canvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+const particles = [];
+const colors = ['#1c2cdf', '#ff9100', '#00ffc3', '#30da0a', '#d4af37']; // tweak to your palette
+
+function createFirework(x, y) {
+  const particleCount = 60;
+  const color = colors[Math.floor(Math.random() * colors.length)];
+
+  for (let i = 0; i < particleCount; i++) {
+    const angle = (Math.PI * 2 * i) / particleCount;
+    const speed = Math.random() * 4 + 2;
+    particles.push({
+      x, y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      alpha: 1,
+      color
+    });
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.globalCompositeOperation = 'lighter';
+
+  for (let i = particles.length - 1; i >= 0; i--) {
+    const p = particles[i];
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.03; // gravity
+    p.alpha -= 0.015;
+
+    if (p.alpha <= 0) {
+      particles.splice(i, 1);
+      continue;
+    }
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.globalAlpha = p.alpha;
+    ctx.fill();
+  }
+
+  ctx.globalAlpha = 1;
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Launch fireworks randomly across the screen
+function launchRandomFirework() {
+  const x = Math.random() * canvas.width;
+  const y = Math.random() * canvas.height * 0.5; // upper half of screen
+  createFirework(x, y);
+}
+
+setInterval(launchRandomFirework, 800);
   // ---- Mobile nav toggle ----
   var navToggle = document.getElementById('navToggle');
   var navScrim = document.getElementById('navScrim');

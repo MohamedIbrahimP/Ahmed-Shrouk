@@ -21,7 +21,14 @@
 <link rel="icon" type="image/x-icon" href="./src/ico.png">
 </head>
 <body class="loading">
+  <canvas id="fireworks-canvas"></canvas>
+<audio id="bg-music" loop>
+  <source src="./src/music.mp3" type="audio/mpeg">
+</audio>
 
+<button id="music-toggle" class="music-toggle" aria-label="Toggle music">
+  🔇
+</button>
   <!-- Preloader -->
   <div class="loader" id="loader">
     <div class="loader-mark">A&nbsp;&amp;&nbsp;Sh</div>
@@ -182,7 +189,7 @@
     </div>
     <div class="wrap">
       <div class="location-actions" data-reveal>
-        <a href="https://www.google.com/maps/search/?api=1&query=Santorini+Hall+Sadat+City+Egypt" target="_blank" rel="noopener" class="btn btn-line">Get Directions</a>
+        <a href="https://maps.app.goo.gl/MHiHPfuYfiE1p8AT8" target="_blank" rel="noopener" class="btn btn-line">Get Directions</a>
       </div>
     </div>
   </section>
